@@ -1,17 +1,17 @@
 ---
 include:
 # Left keyboard - same for all modes (always peripheral)
-- board: nice_nano_v2
+- board: pro_micro
   shield: charybdis_left
 
 # Standalone mode - right keyboard is primary/central
-- board: nice_nano_v2
+- board: pro_micro
   shield: charybdis_right_standalone
   snippet: studio-rpc-usb-uart
   cmake-args: -DCONFIG_ZMK_STUDIO=y
 
 # Dongle mode - prospector dongle is primary/central with display, right is peripheral
-- board: nice_nano_v2
+- board: pro_micro
   shield: charybdis_right_dongle
 - board: seeeduino_xiao_ble
   shield: prospector_dongle prospector_adapter
@@ -19,7 +19,7 @@ include:
   cmake-args: -DCONFIG_ZMK_STUDIO=y
 
 # Settings reset for both board types
-- board: nice_nano_v2
+- board: pro_micro
   shield: settings_reset
 - board: seeeduino_xiao_ble
   shield: settings_reset
