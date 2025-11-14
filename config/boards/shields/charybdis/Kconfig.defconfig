@@ -1,0 +1,33 @@
+if SHIELD_CHARYBDIS_RIGHT_STANDALONE
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CHARYBDIS_RIGHT_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis Right"
+
+endif
+
+if SHIELD_PROSPECTOR_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT_STANDALONE || SHIELD_CHARYBDIS_RIGHT_DONGLE || SHIELD_PROSPECTOR_DONGLE
+
+config ZMK_SPLIT
+	default y
+
+endif
